@@ -98,11 +98,31 @@
             adicionaLista.appendChild(elementosLista);
         };
 
-        for (let index = 1; index <= 3; index += 1){
+        for (let index = 1; index <= 3; index += 1) {
             let adicionah3 = document.createElement("h3");
             adicionah3.innerHTML = "Teste " + index;
-            adicionaMain.appendChild(adicionah3) 
+            adicionaMain.appendChild(adicionah3)
         }
+
+        let tituloClass = document.querySelector("h1");
+        tituloClass.className = "title"
+
+        let descriptionClass = document.getElementsByTagName("h3")
+        for (let index = 0; index < 3; index += 1) {
+            descriptionClass[index].className = "description"
+        };
+
+        let removeSection = document.getElementsByClassName("left-content")[0]
+        adicionaMain.removeChild(removeSection);
+
+        let centraliza = document.getElementsByClassName("right-content")[0]
+        centraliza.style.marginRight = "auto";
+
+        let mudaCor = document.getElementsByClassName("center-content")[0]
+        mudaCor.parentNode.style.backgroundColor = "green";
+
+        document.querySelector("ul").lastChild.remove();
+        document.querySelector("ul").lastChild.remove();
 
     </script>
 </body>
